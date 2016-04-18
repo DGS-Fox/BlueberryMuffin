@@ -32,7 +32,7 @@ Namespace My
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()> _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Dungeons_and_Dragons_Character_Sheet_Creator.Form1
+            Me.MainForm = Global.Dungeons_and_Dragons_Character_Sheet_Creator.frmMain
         End Sub
     End Class
 End Namespace
