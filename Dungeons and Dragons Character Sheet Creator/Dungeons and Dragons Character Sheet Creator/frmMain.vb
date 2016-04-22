@@ -1,5 +1,6 @@
 ﻿Public Class frmMain
-    Dim RandomNumberGenerator As New Random(DateAndTime.Now.Millisecond)
+    Dim RandomNumberGenerator _
+        As New Random(DateAndTime.Now.Millisecond)
 
 #Region "Functions and Subs"
     Private Sub EnableControls()
@@ -8,8 +9,8 @@
     End Sub
 #End Region
 
-
-    Private Sub btnGenerate_Click(sender As Object, e As EventArgs) Handles btnGenerate.Click
+    Private Sub btnGenerate_Click() _
+        Handles btnGenerate.Click
 
         Dim Roller1, Roller2, Roller3, Roller4, Roller5, Roller6 _
             As New clsScoreRoller(CInt(RandomNumberGenerator.Next(1, 100)))
@@ -84,19 +85,21 @@
 
     End Sub
 
-    Private Sub radFirstEdition_CheckedChanged(sender As Object, e As EventArgs) Handles radFirstEdition.CheckedChanged,
-                                                                                         radSecondEdition.CheckedChanged,
-                                                                                         radThirdEdition.CheckedChanged,
-                                                                                         rad35Edition.CheckedChanged,
-                                                                                         radFourthEdition.CheckedChanged,
-                                                                                         radFifthEdition.CheckedChanged
+    Private Sub radFirstEdition_CheckedChanged() _
+        Handles radFirstEdition.CheckedChanged,
+        radSecondEdition.CheckedChanged,
+        radThirdEdition.CheckedChanged,
+        rad35Edition.CheckedChanged,
+        radFourthEdition.CheckedChanged,
+        radFifthEdition.CheckedChanged
         'Enable the dropdown lists after an edition is selected.
         EnableControls()
 
 
     End Sub
 
-    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) _
+        Handles MyBase.Load
 
         lblRNG1.Text = "Null"
         lblRNG2.Text = "Null"
