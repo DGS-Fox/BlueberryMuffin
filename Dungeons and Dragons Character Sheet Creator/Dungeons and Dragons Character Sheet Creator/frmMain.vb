@@ -11,12 +11,8 @@
 
     Private Sub btnGenerate_Click(sender As Object, e As EventArgs) Handles btnGenerate.Click
 
-        Dim Roller1 As New clsScoreRoller(CInt(RandomNumberGenerator.Next(1, 100)))
-        Dim Roller2 As New clsScoreRoller(CInt(RandomNumberGenerator.Next(1, 100)))
-        Dim Roller3 As New clsScoreRoller(CInt(RandomNumberGenerator.Next(1, 100)))
-        Dim Roller4 As New clsScoreRoller(CInt(RandomNumberGenerator.Next(1, 100)))
-        Dim Roller5 As New clsScoreRoller(CInt(RandomNumberGenerator.Next(1, 100)))
-        Dim Roller6 As New clsScoreRoller(CInt(RandomNumberGenerator.Next(1, 100)))
+        Dim Roller1, Roller2, Roller3, Roller4, Roller5, Roller6 _
+            As New clsScoreRoller(CInt(RandomNumberGenerator.Next(1, 100)))
         Dim TotalModCheck As Integer = 0
 
         lblRNG1.Text = Roller1.getScore.ToString
