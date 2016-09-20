@@ -1,14 +1,13 @@
 ﻿Public Class clsScoreRoller
 #Region "Const and Variables"
-    Const MAX_ROLL As Integer = 7 'need to be 7, because 6 wont hit
-    Const LOW_ROLL As Integer = 1
+    Private Const MAX_ROLL As Integer = 7 'need to be 7, because 6 wont hit
+    Private Const LOW_ROLL As Integer = 1
     'Declare Variables for the stat
     Private Roll1, Roll2, Roll3, Roll4, LowestNumber, Score, seed As Integer
 #End Region
 #Region "Constructors"
     Sub New(ByVal NewSeed As Integer)
-        seed = NewSeed
-        Generate()
+        Generate(NewSeed)
     End Sub
 #End Region
 #Region "Properties"
@@ -72,8 +71,8 @@
 #End Region
 #Region "Methods"
 
-    Private Sub Generate()
-        Dim RandomNumberGenerator As New Random(seed)
+    Private Sub Generate(newSeed As Integer)
+        Dim RandomNumberGenerator As New Random(newSeed)
         'Create an array for the scores. I know you dont like arrays so...fuck you i dont care
         Dim scoreArr(3) As Integer
         'Set Roll Values
